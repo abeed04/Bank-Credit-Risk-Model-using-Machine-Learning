@@ -1,0 +1,327 @@
+<style>
+    body {
+      background-color: #e0f2f1; /* Light blue background */
+      font-family: Open Sans, sans-serif; /* Fallback for sans-serif */
+    }
+  
+    h1 {
+      color: #3498db; /* Primary - Blue */
+      font-family: Montserrat, sans-serif; /* Headings use Montserrat */
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+  
+    label {
+      color: #2c3e50; /* Text color - Dark grey */
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  
+    input[type="text"],
+    input[type="submit"] {
+      padding: 0.8em 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1em;
+    }
+  
+    input[type="submit"] {
+      background-color: #f1c40f; /* Secondary - Light orange */
+      color: #fff; /* White text */
+      cursor: pointer;
+    }
+  </style>
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Credit Prediction by Machine Learning</title>
+  </head>
+  <body>
+  
+    <h1> ABEED'S BANK CREDIT RISK PREDICTION</h1>
+    
+    <form action="/predict" method="POST">
+
+      <label for="PROSPECTID">PROSPECTID:</label>
+      <input type="text" id="PROSPECTID" name="PROSPECTID" required><br>
+
+      <label for="Total_TL">Total_TL:</label>
+      <input type="text" id="Total_TL" name="Total_TL" required><br>
+
+      <label for="Tot_Closed_TL">Tot_Closed_TL:</label>
+      <input type="text" id="Tot_Closed_TL" name="Tot_Closed_TL" required><br>
+
+      <label for="Tot_Active_TL">Tot_Active_TL:</label>
+      <input type="text" id="Tot_Active_TL" name="Tot_Active_TL" required><br>
+
+      <label for="Total_TL_opened_L6M">Total_TL_opened_L6M:</label>
+      <input type="text" id="Total_TL_opened_L6M" name="Total_TL_opened_L6M" required><br>
+
+      <label for="Tot_TL_closed_L6M">Tot_TL_closed_L6M:</label>
+      <input type="text" id="Tot_TL_closed_L6M" name="Tot_TL_closed_L6M" required><br>
+
+      <label for="pct_tl_open_L6M">pct_tl_open_L6M:</label>
+      <input type="text" id="pct_tl_open_L6M" name="pct_tl_open_L6M" required><br>
+
+      <label for="pct_tl_closed_L6M">pct_tl_closed_L6M:</label>
+      <input type="text" id="pct_tl_closed_L6M" name="pct_tl_closed_L6M" required><br>
+
+      <label for="pct_active_tl">pct_active_tl:</label>
+      <input type="text" id="pct_active_tl" name="pct_active_tl" required><br>
+
+      <label for="pct_closed_tl">pct_closed_tl:</label>
+      <input type="text" id="pct_closed_tl" name="pct_closed_tl" required><br>
+
+      <label for="Total_TL_opened_L12M">Total_TL_opened_L12M:</label>
+      <input type="text" id="Total_TL_opened_L12M" name="Total_TL_opened_L12M" required><br>
+
+      <label for="Tot_TL_closed_L12M">Tot_TL_closed_L12M:</label>
+      <input type="text" id="Tot_TL_closed_L12M" name="Tot_TL_closed_L12M" required><br>
+
+      <label for="pct_tl_open_L12M">pct_tl_open_L12M:</label>
+      <input type="text" id="pct_tl_open_L12M" name="pct_tl_open_L12M" required><br>
+
+      <label for="pct_tl_closed_L12M">pct_tl_closed_L12M:</label>
+      <input type="text" id="pct_tl_closed_L12M" name="pct_tl_closed_L12M" required><br>
+
+      <label for="Tot_Missed_Pmnt">Tot_Missed_Pmnt:</label>
+      <input type="text" id="Tot_Missed_Pmnt" name="Tot_Missed_Pmnt" required><br>
+
+      <label for="Auto_TL">Auto_TL:</label>
+      <input type="text" id="Auto_TL" name="Auto_TL" required><br>
+
+      <label for="CC_TL">CC_TL:</label>
+      <input type="text" id="CC_TL" name="CC_TL" required><br>
+
+      <label for="Consumer_TL"> Consumer Trade Line: </label>
+      <input type="text" id="Consumer_TL" name="Consumer_TL" required><br>
+
+      <label for="Gold_TL"> Gold Trade Line: </label>
+      <input type="text" id="Gold_TL" name="Gold_TL" required><br>
+
+      <label for="Home_TL"> Home Trade Line: </label>
+      <input type="text" id="Home_TL" name="Home_TL" required><br>
+
+      <label for="PL_TL"> PL Trade Line: </label>
+      <input type="text" id="PL_TL" name="PL_TL" required><br>
+
+      <label for="Secured_TL"> Secured Trade Line: </label>
+      <input type="text" id="Secured_TL" name="Secured_TL" required><br>
+
+      <label for="Unsecured_TL"> Unsecured Trade Line: </label>
+      <input type="text" id="Unsecured_TL" name="Unsecured_TL" required><br>
+
+      <label for="Other_TL"> Other Trade Line: </label>
+      <input type="text" id="Other_TL" name="Other_TL" required><br>
+
+      <label for="Age_Oldest_TL"> Age Oldest Trade Line: </label>
+      <input type="text" id="Age_Oldest_TL" name="Age_Oldest_TL" required><br>
+
+      <label for="Age_Newest_TL"> Age Newest Trade Line: </label>
+      <input type="text" id="Age_Newest_TL" name="Age_Newest_TL" required><br>
+
+      <label for="time_since_recent_payment"> Time Since Recent Payment: </label>
+      <input type="text" id="time_since_recent_payment" name="time_since_recent_payment" required><br>
+
+      <label for="num_times_delinquent"> Number of Times Delinquent: </label>
+      <input type="text" id="num_times_delinquent" name="num_times_delinquent" required><br>
+
+      <label for="max_recent_level_of_deliq"> Maximum Recent Level of Delinquency: </label>
+      <input type="text" id="max_recent_level_of_deliq" name="max_recent_level_of_deliq" required><br>
+
+      <label for="num_deliq_6mts"> Number of Delinquencies in Last 6 Months: </label>
+      <input type="text" id="num_deliq_6mts" name="num_deliq_6mts" required><br>
+
+      <label for="num_deliq_12mts"> Number of Delinquencies in Last 12 Months: </label>
+      <input type="text" id="num_deliq_12mts" name="num_deliq_12mts" required><br>
+
+      <label for="num_deliq_6_12mts"> Number of Delinquencies Between 6 and 12 Months: </label>
+      <input type="text" id="num_deliq_6_12mts" name="num_deliq_6_12mts" required><br>
+
+      <label for="num_times_30p_dpd"> Number of Times 30 Days Past Due: </label>
+      <input type="text" id="num_times_30p_dpd" name="num_times_30p_dpd" required><br>
+
+      <label for="num_times_60p_dpd"> Number of Times 60 Days Past Due: </label>
+      <input type="text" id="num_times_60p_dpd" name="num_times_60p_dpd" required><br>
+
+      <label for="num_std">Number of Standards</label><br>
+      <input type="text" id="num_std" name="num_std" required><br>
+
+      <label for="num_std_6mts">Number of Standards (Last 6 Months)</label><br>
+      <input type="text" id="num_std_6mts" name="num_std_6mts" required><br>
+
+      <label for="num_std_12mts">Number of Standards (Last 12 Months)</label><br>
+      <input type="text" id="num_std_12mts" name="num_std_12mts" required><br>
+
+      <label for="num_sub">Number of Subscriptions</label><br>
+      <input type="text" id="num_sub" name="num_sub" required><br>
+
+      <label for="num_sub_6mts">Number of Subscriptions (Last 6 Months)</label><br>
+      <input type="text" id="num_sub_6mts" name="num_sub_6mts" required><br>
+
+      <label for="num_sub_12mts">Number of Subscriptions (Last 12 Months)</label><br>
+      <input type="text" id="num_sub_12mts" name="num_sub_12mts" required><br>
+
+      <label for="num_dbt">Number of Debits</label><br>
+      <input type="text" id="num_dbt" name="num_dbt" required><br>
+
+      <label for="num_dbt_6mts">Number of Debits (Last 6 Months)</label><br>
+      <input type="text" id="num_dbt_6mts" name="num_dbt_6mts" required><br>
+
+      <label for="num_dbt_12mts">Number of Debits (Last 12 Months)</label><br>
+      <input type="text" id="num_dbt_12mts" name="num_dbt_12mts" required><br>
+
+      <label for="num_lss">Number of Lesser Standard Services</label><br>
+      <input type="text" id="num_lss" name="num_lss" required><br>
+
+      <label for="num_lss_6mts">Number of Lesser Standard Services (Last 6 Months)</label><br>
+      <input type="text" id="num_lss_6mts" name="num_lss_6mts" required><br>
+
+      <label for="num_lss_12mts">Number of Lesser Standard Services (Last 12 Months)</label><br>
+      <input type="text" id="num_lss_12mts" name="num_lss_12mts" required><br>
+
+      <label for="recent_level_of_deliq">Recent Level of Delinquency</label><br>
+      <input type="text" id="recent_level_of_deliq" name="recent_level_of_deliq" required><br>
+
+      <label for="tot_enq">Total Enquiries</label><br>
+      <input type="text" id="tot_enq" name="tot_enq" required><br>
+
+      <label for="CC_enq">CC Enquiries</label><br>
+      <input type="text" id="CC_enq" name="CC_enq" required><br>
+
+      <label for="CC_enq_L6m">CC Enquiries (Last 6 Months)</label><br>
+      <input type="text" id="CC_enq_L6m" name="CC_enq_L6m" required><br>
+
+      <label for="CC_enq_L12m">CC Enquiries (Last 12 Months)</label><br>
+      <input type="text" id="CC_enq_L12m" name="CC_enq_L12m" required><br>
+
+      <label for="PL_enq">PL Enquiries</label><br>
+      <input type="text" id="PL_enq" name="PL_enq" required><br>
+
+      <label for="PL_enq_L6m">PL Enquiries (Last 6 Months)</label><br>
+      <input type="text" id="PL_enq_L6m" name="PL_enq_L6m" required><br>
+
+      <label for="PL_enq_L12m">PL Enquiry (Last 12 Months):</label>
+      <input type="text" id="PL_enq_L12m" name="PL_enq_L12m" required><br>
+
+      <label for="time_since_recent_enq">Time Since Recent Enquiry:</label>
+      <input type="text" id="time_since_recent_enq" name="time_since_recent_enq" required><br>
+
+      <label for="enq_L12m">Enquiries (Last 12 Months):</label>
+      <input type="text" id="enq_L12m" name="enq_L12m" required><br>
+
+      <label for="enq_L6m">Enquiries (Last 6 Months):</label>
+      <input type="text" id="enq_L6m" name="enq_L6m" required><br>
+
+      <label for="enq_L3m">Enquiries (Last 3 Months):</label>
+      <input type="text" id="enq_L3m" name="enq_L3m" required><br>
+
+      <label for="EDUCATION">Education:</label>
+      <input type="text" id="EDUCATION" name="EDUCATION" required><br>
+
+      <label for="AGE">Age:</label>
+      <input type="text" id="AGE" name="AGE" required><br>
+
+      <label for="NETMONTHLYINCOME">Net Monthly Income:</label>
+      <input type="text" id="NETMONTHLYINCOME" name="NETMONTHLYINCOME" required><br>
+
+      <label for="Time_With_Curr_Empr">Time With Current Employer:</label>
+      <input type="text" id="Time_With_Curr_Empr" name="Time_With_Curr_Empr" required><br>
+
+      <label for="pct_of_active_TLs_ever">% of Active TLs Ever:</label>
+      <input type="text" id="pct_of_active_TLs_ever" name="pct_of_active_TLs_ever" required><br>
+
+      <label for="pct_opened_TLs_L6m_of_L12m">% Opened TLs (Last 6 Months of Last 12 Months):</label>
+      <input type="text" id="pct_opened_TLs_L6m_of_L12m" name="pct_opened_TLs_L6m_of_L12m" required><br>
+
+      <label for="pct_currentBal_all_TL">% Current Balance of All TLs:</label>
+      <input type="text" id="pct_currentBal_all_TL" name="pct_currentBal_all_TL" required><br>
+
+      <label for="CC_Flag">Credit Card Flag:</label>
+      <input type="text" id="CC_Flag" name="CC_Flag" required><br>
+
+      <label for="PL_Flag">Personal Loan Flag:</label>
+      <input type="text" id="PL_Flag" name="PL_Flag" required><br>
+
+      <label for="pct_PL_enq_L6m_of_L12m">% PL Enquiries (Last 6 Months of Last 12 Months):</label>
+      <input type="text" id="pct_PL_enq_L6m_of_L12m" name="pct_PL_enq_L6m_of_L12m" required><br>
+
+      <label for="pct_CC_enq_L6m_of_L12m">% CC Enquiries (Last 6 Months of Last 12 Months):</label>
+      <input type="text" id="pct_CC_enq_L6m_of_L12m" name="pct_CC_enq_L6m_of_L12m" required><br>
+
+      <label for="pct_PL_enq_L6m_of_ever">% PL Enquiries (Last 6 Months of Ever):</label>
+      <input type="text" id="pct_PL_enq_L6m_of_ever" name="pct_PL_enq_L6m_of_ever" required><br>
+
+      <label for="pct_CC_enq_L6m_of_ever">pct_CC_enq_L6m_of_ever:</label>
+      <input type="text" id="pct_CC_enq_L6m_of_ever" name="pct_CC_enq_L6m_of_ever" required><br>
+
+      <label for="HL_Flag">HL_Flag:</label>
+      <input type="text" id="HL_Flag" name="HL_Flag" required><br>
+
+      <label for="GL_Flag">GL_Flag:</label>
+      <input type="text" id="GL_Flag" name="GL_Flag" required><br>
+
+      <label for="Credit_Score">Credit Score:</label>
+      <input type="text" id="Credit_Score" name="Credit_Score" required><br>
+
+      <label for="MARITALSTATUS_Married">Married:</label>
+      <input type="radio" id="MARITALSTATUS_Married" name="MARITALSTATUS" value="Married" required>
+
+      <label for="MARITALSTATUS_Single">Single:</label>
+      <input type="radio" id="MARITALSTATUS_Single" name="MARITALSTATUS" value="Single" required><br>
+
+      <label for="GENDER_F">Female:</label>
+      <input type="radio" id="GENDER_F" name="GENDER" value="Female" required>
+
+      <label for="GENDER_M">Male:</label>
+      <input type="radio" id="GENDER_M" name="GENDER" value="Male" required><br>
+
+      <label for="last_prod_enq2_AL">Last Product Enquiry (AL):</label>
+      <input type="text" id="last_prod_enq2_AL" name="last_prod_enq2_AL" required><br>
+
+      <label for="last_prod_enq2_CC">Last Product Enquiry (CC):</label>
+      <input type="text" id="last_prod_enq2_CC" name="last_prod_enq2_CC" required><br>
+
+      <label for="last_prod_enq2_ConsumerLoan">Last Product Enquiry (Consumer Loan):</label>
+      <input type="text" id="last_prod_enq2_ConsumerLoan" name="last_prod_enq2_ConsumerLoan" required><br>
+
+      <label for="last_prod_enq2_HL">Last Product Enquiry (HL):</label>
+      <input type="text" id="last_prod_enq2_HL" name="last_prod_enq2_HL" required><br>
+
+      <label for="last_prod_enq2_PL">Last Product Enquiry (PL):</label>
+      <input type="text" id="last_prod_enq2_PL" name="last_prod_enq2_PL" required><br>
+
+      <label for="last_prod_enq2_others">Last Product Enquiry (Others):</label>
+      <input type="text" id="last_prod_enq2_others" name="last_prod_enq2_others" required><br>
+
+      <label for="first_prod_enq2_AL">First Product Enquiry (AL):</label>
+      <input type="text" id="first_prod_enq2_AL" name="first_prod_enq2_AL" required><br>
+
+      <label for="first_prod_enq2_CC">First Product Enquiry (CC):</label>
+      <input type="text" id="first_prod_enq2_CC" name="first_prod_enq2_CC" required><br>
+
+      <label for="first_prod_enq2_ConsumerLoan">First Product Enquiry (Consumer Loan):</label>
+      <input type="text" id="first_prod_enq2_ConsumerLoan" name="first_prod_enq2_ConsumerLoan" required><br>
+
+      <label for="first_prod_enq2_HL">First Product Enquiry (HL):</label>
+      <input type="text" id="first_prod_enq2_HL" name="first_prod_enq2_HL" required><br>
+
+      <label for="first_prod_enq2_PL">First Product Enquiry (PL):</label>
+      <input type="text" id="first_prod_enq2_PL" name="first_prod_enq2_PL" required><br>
+
+      <label for="first_prod_enq2_others">first_prod_enq2_others:</label>
+      <input type="text" id="first_prod_enq2_others" name="first_prod_enq2_others" required><br>
+
+
+      <input type="submit" value="Predict"><br><br><br>
+  
+  
+      
+      <p style="font-size: 1.2em; font-weight: bold;">CHANCES OF CUSTOMER GETTING LOAN(0-4): <span id="result">{{result}}</span></p>
+  
+  
+    </form>
+  </body>
+  </html>
+  
