@@ -11,8 +11,6 @@
 
 - ⚡This project demonstrates proficiency in machine learning, data analysis, data visualization, and model building for real-world financial applications.
 
-pen_spark
-
 
 <h3 align="left">Requirements</h3>
 
